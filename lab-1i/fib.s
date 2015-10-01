@@ -22,6 +22,7 @@ fibonacci:
 
 	mov r1, #0            @R1 = 0
 	mov r2, #1            @R2 = 1
+			      @test
 
 .Lloop:
 	mov r3, r2            @R3(TEMP) = R2
