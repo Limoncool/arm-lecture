@@ -20,15 +20,15 @@ fibonacci:
 	cmp r0, #1            @If R0 = 1
 	beq .L1		      @Jump to L1
 
-	mov r1, #0            @R1 = 0
-	mov r2, #1            @R2 = 1
+	mov r1, #0
+	mov r2, #1
 
 .Lloop:
-	mov r3, r2            @R3(TEMP) = R2
-	add r2, r1, r2	      @R2 = R1 + R2
-	mov r1, r3	      @R1 = R3(TEMP)
-	sub r0, r0, #1        @R0 = R0 - 1 (Count)
-	cmp r0, #1            @If R1 > 1, loop continue
+	mov r3, r2
+	add r2, r1, r2
+	mov r1, r3
+	sub r0, r0, #1
+	cmp r0, #1
 	bgt .Lloop  
 	
 	mov r0, r2

@@ -13,18 +13,18 @@ fibonacci:
 	@ PROLOG
 	push {lr}
 
-	cmp r0, #1            @If R0 = 1
-	beq .L1		      @Jump to L1
+	cmp r0, #1
+	beq .L1	
 
-	subs r0, r0, #1       @R0 = R0 - 1
-	cmp r0, #0            @If R0 = 0
-	ble .L0		      @Jump to L0
+	subs r0, r0, #1
+	cmp r0, #0
+	ble .L0
 
 	bl fibonacci
 	@ sub r1, r0 ,#1
-	add r2, r0, r1        @R2 = R0 + R1
-	mov r0, r1	      @Move R1 to R0
-	mov r1, r2	      @Then move R2 to R1
+	add r2, r0, r1
+	mov r0, r1
+	mov r1, r2	
 	 
 
 	pop {pc}		@EPILOG
