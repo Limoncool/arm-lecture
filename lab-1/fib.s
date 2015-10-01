@@ -21,7 +21,7 @@ fibonacci:
 	ble .L0		      @Jump to L0
 
 	bl fibonacci
-	@ sub r1, r0 ,#1
+	@ sub r1, r0 ,#1      @no use
 	add r2, r0, r1        @R2 = R0 + R1
 	mov r0, r1	      @Move R1 to R0
 	mov r1, r2	      @Then move R2 to R1
